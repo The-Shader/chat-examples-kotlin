@@ -1,0 +1,21 @@
+package examples.animal.forest.chat
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
+import com.example.chatexample.R
+
+
+class SplashActivity : AppCompatActivity(), Runnable {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+        Handler().postDelayed(this, 100)
+    }
+
+    override fun run() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+}

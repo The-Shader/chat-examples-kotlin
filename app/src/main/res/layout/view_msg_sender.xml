@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="false"
+    android:background="@drawable/message_composer_bg">
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/attachment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@null"
+        android:hint="@string/send_a_message"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:padding="20dp" />
+
+    <ImageView
+        android:id="@+id/attachment"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+        app:layout_constraintEnd_toStartOf="@+id/send"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/attach"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_attachment" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toEndOf="@+id/attachment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/send"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_send" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
